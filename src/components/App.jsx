@@ -21,11 +21,9 @@ export const App = () => {
   const [totalHits, setTotalHits] = useState(0);
 
   useEffect(() => {
-    console.log(search.search);
     if (!search) {
       return;
     }
-    console.log(search);
     setLoader(true);
     getImage(search, page).then(data => {
       try {
